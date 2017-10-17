@@ -1,8 +1,9 @@
 var VideoListEntryView = Backbone.View.extend({
 
+ 
   initialize: function() {
-    
-
+    this.render();
+    console.log('ONE VIDEO IS BEING INITIALIZED NOW');
   },
 
   events: {
@@ -16,7 +17,7 @@ var VideoListEntryView = Backbone.View.extend({
 
 
   render: function() {
-  	console.log('render is being called from videolistentryview');
+  	console.log('render is being called from videolistentryview', this);
     this.$el.html(this.template(this.model.attributes));
     return this;
   },
